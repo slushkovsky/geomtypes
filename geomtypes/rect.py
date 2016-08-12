@@ -1,5 +1,8 @@
 import inspect
 
+from . import exc
+
+
 class _Rect(object): 
 
     def __init__(self, x, y, width, height):
@@ -16,7 +19,7 @@ class _Rect(object):
             self.width  = self._types['width'](width)
             self.height = self._types['height'](height)
         except:
-            ClassParamsConvertError(self)
+            exc.ClassParamsConvertError(self)
 
         self.validate()
 

@@ -1,5 +1,8 @@
 import inspect
 
+from . import exc
+
+
 class _Point(object): 
 
     def __init__(self, x, y): 
@@ -12,7 +15,7 @@ class _Point(object):
             self.x = self._types['x'](x)
             self.y = self._types['y'](y)
         except:
-            ClassParamsConvertError(self)
+            exc.ClassParamsConvertError(self)
 
         self.validate()
 

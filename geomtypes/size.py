@@ -1,6 +1,9 @@
 import sys
 import inspect
 
+from . import exc
+
+
 class _Size(object): 
 
     def __init__(self, width, height): 
@@ -11,7 +14,7 @@ class _Size(object):
             self.width  = self._types['width'](width)
             self.height = self._types['height'](height)
         except:
-            ClassParamsConvertError(self)
+            exc.ClassParamsConvertError(self)
 
         self.validate()
 
