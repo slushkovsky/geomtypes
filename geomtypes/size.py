@@ -40,8 +40,12 @@ class _Size(object):
 
     @classmethod
     def zero(cls): 
-        return cls(width =cls._types['width'] (0), 
-                   height=cls._types['height'](0))
+        obj = cls.__new__(cls)
+
+        obj.__init__(width =obj._types['width'] (0), 
+                     height=obj._types['height'](0))
+
+        return obj
 
 
 class Size(_Size): 
