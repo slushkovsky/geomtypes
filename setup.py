@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-	name='geomtypes',
+    name='geomtypes',
     version='0.1',
     description='Simple geomery types',
     author='Sergey Lushkovsky',
